@@ -6,7 +6,7 @@
 import logging
 import jsonpath
 import requests
-
+from common import util_func
 session = requests.session()
 class RequestsClient:
     def __init__(self):
@@ -29,12 +29,12 @@ class RequestsClient:
     # 第二个指的是你想返回匹配到的第几个，默认是0返回第一个
     def extract_resp(self, json_path, index=0):
         # 注意有的接口是没有返回信息的，返回信息是空的
-        text = self.resp.text # 获取返回信息的字符串形式
+        text = self.resp.text  # 获取返回信息的字符串形式
         if text != '':
-            resp_json = self.resp.json() # 获取响应信息的json格式
+            resp_json = self.resp.json()  # 获取响应信息的json格式
             # 如果能匹配到值，那么res就是个列表
             # 如果匹配不到res就是个False
-            res = jsonpath.jsonpath(resp_json,json_path)
+            res = jsonpath.jsonpath(resp_json, json_path)
             if res:
                 if index < 0:
                     # 如果index小于0 ，我认为你要匹配到的所有结果
@@ -51,7 +51,17 @@ class RequestsClient:
             raise BaseException('接口返回信息为空，无法提取')
 if __name__ == '__main__':
     client = RequestsClient()
-    client.send(url='http://82.156.74.26:9099/login',
-                method='post',
-                data={'username': '18866668888', 'password': '123456'})
-    print(client.extract_resp('Admin-Token'))
+    headers = {
+                         "X-SCF-SIGN":"4b24df686a1ab0ab28114335448279f6",
+                         "X-SCF-TV":"cur_timestamp()"
+                        }
+    print(client.send(url='http://58.218.196.216:11080/uaa/v1/security/token',
+                      method='post',
+                      headers=headers
+                      ))
+    # {
+    #     "s_authToken": "$.data.authToken",
+    #     "s_token": "$.data.csrf.token"
+    # }
+    print(client.extract_resp('$.data.authToken'))
+    print(client.extract_resp('$.data.csrf.token'))
