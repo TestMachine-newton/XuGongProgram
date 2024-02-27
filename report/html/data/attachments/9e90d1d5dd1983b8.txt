@@ -1,0 +1,18 @@
+2024-02-27 13:48:29 [client.py:15] [INFO] 接口地址是:http://58.218.196.216:11080/uaa/v1/security/token
+2024-02-27 13:48:29 [client.py:16] [INFO] 接口请求方式是:post
+2024-02-27 13:48:29 [client.py:18] [INFO] 接口的verify是:False
+2024-02-27 13:48:29 [client.py:18] [INFO] 接口的headers是:{'X-SCF-SIGN': '4b24df686a1ab0ab28114335448279f6', 'X-SCF-TV': '1709012909896'}
+2024-02-27 13:48:30 [client.py:21] [INFO] 接口响应状态码是:200
+2024-02-27 13:48:30 [client.py:22] [INFO] 接口响应信息是:{"code":"0","message":"成功","data":{"authToken":"bb275ab9-19ae-4181-b595-d2115ac464d8","csrf":{"headerName":"X-CSRF-TOKEN","parameterName":"_csrf","token":"782bbfb0-5a3f-4d8e-b57f-21cbb2959221"},"verifyCodeType":"SMS"}}
+2024-02-27 13:48:30 [client.py:44] [INFO] 通过$.data.authToken提取到的结果是:bb275ab9-19ae-4181-b595-d2115ac464d8
+2024-02-27 13:48:30 [client.py:44] [INFO] 通过$.data.csrf.token提取到的结果是:782bbfb0-5a3f-4d8e-b57f-21cbb2959221
+2024-02-27 13:48:30 [client.py:44] [INFO] 通过$.code提取到的结果是:0
+2024-02-27 13:48:30 [client.py:15] [INFO] 接口地址是:http://58.218.196.216:11080/uaa/login
+2024-02-27 13:48:30 [client.py:16] [INFO] 接口请求方式是:post
+2024-02-27 13:48:30 [client.py:18] [INFO] 接口的verify是:False
+2024-02-27 13:48:30 [client.py:18] [INFO] 接口的headers是:{'X-Auth-Token': 'bb275ab9-19ae-4181-b595-d2115ac464d8', 'X-CSRF-TOKEN': '782bbfb0-5a3f-4d8e-b57f-21cbb2959221', 'Content-Type': 'application/json;charset=UTF-8', 'X-SCF-SIGN': '4b24df686a1ab0ab28114335448279f6', 'X-SCF-TV': '1709012910211', 'X-SCF-NONCE': '9be1bc34-e71f-4645-912d-6316dd753cd8'}
+2024-02-27 13:48:30 [client.py:18] [INFO] 接口的json是:{'corpName': '天津市润福森商贸有限公司', 'username': '18911311510', 'password': 'V+yArvPl+gfXW+5o4iUzq0oLi8K8dTvK23dle8orJGOMPMvpSsV7Ga8HBjPml9iEk0ku9yHer9soRetqDkYvrdY7FBVIimsEGrZ+hijECfXjvjNJKU6huIws3cA90Zp0snD0IL6MeGpxsZbZ8ZogcvTGgt9GYC+FzGJwb4RtBa0=', 'verifyCode': '111111', 'verifyCodeKey': '484ffb322e0e4068a333858644d1de32'}
+2024-02-27 13:48:30 [client.py:21] [INFO] 接口响应状态码是:200
+2024-02-27 13:48:30 [client.py:22] [INFO] 接口响应信息是:{"code":"0","message":"成功","data":{"authToken":"755ce501-3a13-4da7-bfa6-e4b76ff17f47","wsToken":"320a7d28c7784edda1deb9a5efc6d713","authorities":[{"code":"ROLE_CORE_OPERATOR","name":null,"type":null},{"code":"ROLE_CORE_PRIMARY_REVIEW","name":null,"type":null},{"code":"ROLE_CORP_OPERATOR","name":null,"type":null}]}}
+2024-02-27 13:48:30 [client.py:44] [INFO] 通过$.data.authToken提取到的结果是:755ce501-3a13-4da7-bfa6-e4b76ff17f47
+2024-02-27 13:48:30 [client.py:44] [INFO] 通过$.code提取到的结果是:0

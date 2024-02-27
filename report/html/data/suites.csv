@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Feb 27 13:48:29 CST 2024","Tue Feb 27 13:48:30 CST 2024","569","","run","","","","test_run[核心企业经办签发融票接口测试集合-登录成功-case_info_list0]",""
+"passed","Tue Feb 27 13:48:30 CST 2024","Tue Feb 27 13:48:32 CST 2024","1937","","run","","","","test_run[核心企业经办签发融票接口测试集合-提交签发申请成功-case_info_list2]",""
+"failed","Tue Feb 27 13:48:30 CST 2024","Tue Feb 27 13:48:30 CST 2024","235","","run","","","","test_run[核心企业经办签发融票接口测试集合-签发融票成功-case_info_list1]",""
